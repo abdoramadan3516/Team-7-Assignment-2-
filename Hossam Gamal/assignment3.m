@@ -16,10 +16,33 @@ while i<5
 
     material_cost=  summation(1)
     fprintf("material cost: %d",material_cost)
+
+    total_material_cost(i)=material_cost
+
+
+
+
     labor_cost= summation(2)
     fprintf("quarter cost: %d",labor_cost)
+
+
+
+
+    total_labor_cost(i)=labor_cost
+
+
     transportation_cost=summation(3)
     fprintf("quarter cost: %d",transportation_cost)
+    total_transportation_cost(i)=transportation_cost
+
+    total_quarter_cost= material_cost + labor_cost +...
+        transportation_cost
+
+    fprintf("the total quarter %d cost: %d",i,total_quarter_cost)
+
 
     i=i+1
 end
+the_total_material_cost=sum(total_material_cost)
+the_total_labor_cost=sum(total_labor_cost)
+the_total_transportation_cost=sum(total_transportation_cost)
